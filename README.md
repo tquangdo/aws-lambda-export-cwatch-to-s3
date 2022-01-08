@@ -47,6 +47,7 @@ AWS Serverless Lambda function that sends log data from CloudWatch Logs and S3.
     - create IAM role `serverless-cw-to-s3-exporter-role`
     - Create a new IAM Policy `ListBucketPolicy` with the following  configuration. _If you want, restrict it only to the buckets of your interests, in resources section_.
     **A policy to allow the script to verify valid S3 buckets**
+    ![policy](images/policy.png)
 
     ```json
     {
