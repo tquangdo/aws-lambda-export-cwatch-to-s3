@@ -6,7 +6,7 @@
 [![Report an issue](https://img.shields.io/badge/Support-Issues-green)](https://github.com/tquangdo/aws-lambda-export-cwatch-to-s3/issues/new)
 
 AWS Serverless Lambda function that sends log data from CloudWatch Logs and S3.
-![Fig : Serverless Cloudwatch Logs To S3 Exporter](images/serverless-cloudwatch-logs-exporter.png)
+![overview](images/overview.png)
 
 ## Follow this article in [Youtube](https://www.youtube.com/watch?v=JS0bDErJ9Rw&list=PLxzKY3wu0_FKok5gI1v4g4S-g-PLaW9YD&index=31&t=0s)
 
@@ -48,21 +48,6 @@ AWS Serverless Lambda function that sends log data from CloudWatch Logs and S3.
     - Create a new IAM Policy `ListBucketPolicy` with the following  configuration. _If you want, restrict it only to the buckets of your interests, in resources section_.
     **A policy to allow the script to verify valid S3 buckets**
     ![policy](images/policy.png)
-
-    ```json
-    {
-        "Version": "2012-10-17",
-        "Statement": [
-            {
-                "Effect": "Allow",
-                "Action": [
-                    "s3:ListBucket"
-                ],
-                "Resource": "*"
-            }
-        ]
-    }
-    ```
 
 1. ## ⚙️ Configure Lambda Function - `cw-logs-export`
     - Provide the function name & choose `Python 3.7`
